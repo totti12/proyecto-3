@@ -1,3 +1,58 @@
-#Responsable Módulo:
-* Taylor Garita
-##Se detallarán aspectos propiamente de la tabla tuberculosis y todo lo que involucre ella para con el proyecto
+
+#Importar Tabla tuberculosis
+
+| Paso     | Instruccion SQL                                                               | Explicación de cada variable                                                                                                |
+|----------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Exportar | COPY tuberculosis TO  '/home/tuberculosis.csv'  DELIMITERS  ','  CSV HEADER;  |                                                                                                                             |
+| Importar | Crear el esquema en postgresql                                                |                                                                                                                             |
+| Numero 1 | CREATE TABLE tuberculosis  (                                                  |                                                                                                                             |
+|          | country                               varchar,                                | País o territorio nombre                                                                                                    |
+|          | iso2                                  varchar,                                | ISO de 2 caracteres país / código de territorio                                                                             |
+|          | Iso3                                  varchar,                                | ISO 3 caracteres país / código de territorio                                                                                |
+|          | iso_numeric                           int,                                    | ISO del país numérica / código de territorio                                                                                |
+|          | g_whoregion                           varchar,                                | Agrupaciones de países subregionales                                                                                        |
+|          | year                                  int,                                    | Año de investigación                                                                                                        |
+|          | e_pop_num                             float,                                  | Número de la población total estimada                                                                                       |
+|          | e_prev_100k                           float,                                  | La prevalencia estimada de la tuberculosis (todas las formas) por 100 000 habitantes                                        |
+|          | e_prev_100k_lo                        float,                                  | La prevalencia estimada de la tuberculosis (todas las formas) por 100 000 habitantes, de baja cota                          |
+|          | e_prev_100k_hi                        float,                                  | La prevalencia estimada de la tuberculosis (todas las formas) por 100 000 habitantes, de alta cota                          |
+|          | e_prev_num                            float,                                  | La prevalencia estimada de la tuberculosis (todas las formas)                                                               |
+|          | e_prev_num_lo                         float,                                  | La prevalencia estimada de la tuberculosis (todas las formas), baja cota                                                    |
+|          | e_prev_num_hi                         float,                                  | La prevalencia estimada de la tuberculosis (todas las formas), alta cota                                                    |
+|          | source_prev                           varchar,                                | Método para derivar estimaciones de la prevalencia                                                                          |
+|          | e_mort_exc_tbhiv_100k                 float,                                  | La mortalidad estimada de casos de tuberculosis (todas las formas, excluyendo el VIH) por 100 000 habitantes                |
+|          | e_mort_exc_tbhiv_100k_lo              float,                                  | La mortalidad estimada de casos de tuberculosis (todas las formas, excluyendo el VIH), por 100 000 habitantes, de baja cota |
+|          | e_mort_exc_tbhiv_100k_hi              float,                                  | La mortalidad estimada de casos de tuberculosis (todas las formas, excluyendo el VIH), por 100 000 habitantes, de alta cota |
+|          | e_mort_exc_tbhiv_num                  float,                                  | Estimación del número de muertes por tuberculosis (todas las formas, excluyendo el VIH)                                     |
+|          | e_mort_exc_tbhiv_num_lo               float,                                  | Estimación del número de muertes por tuberculosis (todas las formas, excluyendo el VIH), baja cota                          |
+|          | e_mort_exc_tbhiv_num_hi               float,                                  | Estimación del número de muertes por tuberculosis (todas las formas, excluyendo el VIH), de alta cota                       |
+|          | e_mort_tbhiv_100k                     float,                                  | La mortalidad estimada de casos de TB que son VIH-positivas, por 100 000 habitantes                                         |
+|          | e_mort_tbhiv_100k_lo                  float,                                  | La mortalidad estimada de casos de TB que son VIH-positivas, por 100 000 habitantes, de baja cota                           |
+|          | e_mort_tbhiv_100k_hi                  float,                                  | La mortalidad estimada de casos de TB que son VIH-positivas, por 100 000 habitantes, de alta cota                           |
+|          | e_mort_tbhiv_num                      float,                                  | Estimación del número de muertes por TB en personas que son VIH-positivas                                                   |
+|          | e_mort_tbhiv_num_lo                   float,                                  | Estimación del número de muertes por TB en personas que son VIH-positivas, baja cota                                        |
+|          | e_mort_tbhiv_num_hi                   float,                                  | Estimación del número de muertes por TB en personas que son VIH-positivos, alta cota                                        |
+|          | source_mort                           varchar,                                | Método para derivar las estimaciones de mortalidad                                                                          |
+|          | e_inc_100k                            float,                                  | Incidencia estimada (todas las formas) por 100 000 habitantes                                                               |
+|          | e_inc_100k_lo                         float,                                  | Incidencia estimada (todas las formas) por 100 000 habitantes, baja cota                                                    |
+|          | e_inc_100k_hi                         float,                                  | Incidencia estimada (todas las formas) por 100 000 habitantes, de alta cota                                                 |
+|          | e_inc_num                             float,                                  | Número estimado de casos incidentes (todas las formas)                                                                      |
+|          | e_inc_num_lo                          float,                                  | Número estimado de casos incidentes (todas las formas), baja cota                                                           |
+|          | e_inc_num_hi                          float,                                  | Número estimado de casos incidentes (todas las formas), alta cota                                                           |
+|          | source_inc                            varchar,                                | Método para derivar estimaciones de incidencia                                                                              |
+|          | e_tbhiv_prct                          float,                                  | Estimada del VIH en TB incidente (por ciento)                                                                               |
+|          | e_tbhiv_prct_lo                       float,                                  | Estimada del VIH en TB incidente (por ciento), baja cota                                                                    |
+|          | e_tbhiv_prct_hi                       float,                                  | Estimada del VIH en TB incidente (por ciento), de alta cota                                                                 |
+|          | e_inc_tbhiv_100k                      float,                                  | La incidencia estimada de casos de TB que son VIH-positivas por cada 100 000 habitantes                                     |
+|          | e_inc_tbhiv_100k_lo                   float,                                  | La incidencia estimada de casos de TB que son VIH-positivas por cada 100 000 habitantes, baja cota                          |
+|          | e_inc_tbhiv_100k_hi                   float,                                  | La incidencia estimada de casos de TB que son VIH-positivas por cada 100 000 habitantes, de alta cota                       |
+|          | e_inc_tbhiv_num                       float,                                  | La incidencia estimada de casos de TB que son VIH-positivas                                                                 |
+|          | e_inc_tbhiv_num_lo                    float,                                  | La incidencia estimada de casos de TB que son VIH-positivas, baja cota                                                      |
+|          | e_inc_tbhiv_num_hi                    float,                                  | La incidencia estimada de casos de TB que son VIH-positivos, alta cota                                                      |
+|          | source_tbhiv                          varchar,                                | Método para derivar estimaciones TBHIV                                                                                      |
+|          | c_cdr                                 float,                                  | Tasa de detección de casos (todas las formas), por ciento                                                                   |
+|          | c_cdr_lo                              float,                                  | Tasa de detección de casos (todas las formas), por ciento, baja cota                                                        |
+|          | c_cdr_hi                              float                                   | Tasa de detección de casos (todas las formas), por ciento, alta cota                                                        |
+|          | );                                                                            |                                                                                                                             |
+| Numero 2 | Cargar La tabla                                                               |                                                                                                                             |
+|          | COPY tuberculosis FROM '/home/tuberculosis.csv'  DELIMITERS  ','  CSV HEADER; |                                                                                                                             |
