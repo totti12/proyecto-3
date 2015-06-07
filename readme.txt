@@ -5,10 +5,12 @@ Objetivos Especificos
                 
 Jose Ángel Rojas
               1. Operadores.md
+Geovanny Q
+              1. Funciones
 Pedro Garita
               1. Extension.md
 Taylor Garita
               1. Tuberculosis.md
-              2. Funciones.md
+
 -----------------------------------------------------------------------------------------------------------------------
 
