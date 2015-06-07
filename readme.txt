@@ -5,3 +5,4 @@ Objetivo General:
 Geovanny Quirós Pérez, Creación de archivo readme.txt, se detallará aspectos propios del avance del proyecto
 -----------------------------------------------------------------------------------------------------------------------
 Jose Ángel, creación archivo 2.Operadores.md, se detallará los distintos operadores lógicos con su información asociada
+Geovanny Quirós, creacion archivo index.md, presentación del documento a desarrollar
