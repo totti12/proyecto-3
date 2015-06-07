@@ -1,10 +1,10 @@
 ## Curso Bases de Datos I
 ## Documentación Proyecto III
-#### Alumnos
+#### Estudiantes
 * Geovanny Quirós Pérez
 * Jose Ángel Rojas Solera
-* Taylor Garita
-* Pedro Garita
+* Taylor Garita Campos
+* Pedro Garita Sánchez
 
 #### Profesor
 * Johnny Villalobos  Murillo
