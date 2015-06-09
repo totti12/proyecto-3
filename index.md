@@ -1,3 +1,4 @@
+![LOGOUNA](imagenes/logouna.png)
 ## Curso Bases de Datos I
 ## Documentación Proyecto III
 #### Estudiantes
@@ -6,7 +7,7 @@
 * Taylor Garita Campos
 * Pedro Garita Sánchez
 
-#### Profesor
+#### Profesor                
 * Johnny Villalobos  Murillo
 
 _Universidad Nacional, Campus Benjamín Nuñez, Segundo Ciclo, 2015_
