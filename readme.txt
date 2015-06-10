@@ -11,7 +11,4 @@ Pedro Garita
               1. Extension.md
 Taylor Garita
               1. Tuberculosis.md
-
-Link de Documentación: http://bases-datos-1-proyecto-3.readthedocs.org/en/latest/
 -----------------------------------------------------------------------------------------------------------------------
-
